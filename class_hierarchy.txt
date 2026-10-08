@@ -1,0 +1,29 @@
+owl:Thing
+└── MusicEntity
+    ├── MusicRelease               [AllDisjoint: Album, Single, EP, Compilation]
+    │   ├── AlbumRelease
+    │   ├── SingleRelease
+    │   ├── EPRelease
+    │   └── CompilationRelease
+    ├── MusicContributor           [Disjoint: SoloArtist, MusicGroup]
+    │   ├── SoloArtist
+    │   └── MusicGroup
+    ├── MusicalGenre               [AllDisjoint: across distinct genre families]
+    │   ├── PopGenre
+    │   ├── RockGenre
+    │   ├── ElectronicGenre
+    │   ├── HipHopGenre
+    │   ├── ClassicalGenre
+    │   ├── JazzGenre
+    │   ├── LatinGenre
+    │   ├── FolkGenre
+    │   ├── MetalGenre
+    │   └── AmbientGenre
+    ├── AudioFeature               [Disjoint: RhythmFeature, PerceptualFeature]
+    │   ├── RhythmFeature
+    │   │   ├── TempoFeature
+    │   │   └── TimeSignatureFeature
+    ├── MusicalKey
+    └── MusicalModality            [Disjoint: MajorMode, MinorMode]
+        ├── MajorMode
+        └── MinorMode

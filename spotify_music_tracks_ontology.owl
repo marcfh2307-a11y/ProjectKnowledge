@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#artistName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">artist name</rdfs:label>
+    <rdfs:comment xml:lang="en">The stage or band name of the artist.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#speechinessScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">speechiness score</rdfs:label>
+    <rdfs:comment xml:lang="en">Presence of spoken words from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#DanceableTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Danceable Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track with rhythm, tempo, and beat regularity highly suitable for dancing (danceability &gt;= 0.7).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#isArtistOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">is artist of</rdfs:label>
+    <rdfs:comment xml:lang="en">Inverse relation of hasArtist.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasArtist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#JazzGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Jazz Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Music tradition characterized by swing rhythms, complex chords, and improvisation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#DanceabilityFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Danceability Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement of how suitable a track is for dancing.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#EnergyFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Energy Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement of perceptual intensity and activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#SingleRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:label xml:lang="en">Single Release</rdfs:label>
+    <rdfs:comment xml:lang="en">A standalone release containing typically one or two promotional tracks.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Music Entity</rdfs:label>
+    <rdfs:comment xml:lang="en">The root abstract concept for all music-related entities in the ontology.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#FolkGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Folk Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Traditional and acoustic vernacular music.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AcousticnessFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Acousticness Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Confidence value describing whether the track is acoustic.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#TimeSignatureFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#RhythmFeature"/>
+    <rdfs:label xml:lang="en">Time Signature Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">The meter and rhythmic subdivision of bars in a track.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#tempoBpm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">tempo in BPM</rdfs:label>
+    <rdfs:comment xml:lang="en">Estimated speed in beats per minute.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalKey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Musical Key</rdfs:label>
+    <rdfs:comment xml:lang="en">The pitch and tonic center of a musical track (e.g., C, C#, D).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasMusicalKey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalKey"/>
+    <rdfs:label xml:lang="en">has musical key</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a track to its estimated musical key.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasModality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalModality"/>
+    <rdfs:label xml:lang="en">has modality</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a track to its musical mode (Major or Minor).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#isExplicit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">is explicit</rdfs:label>
+    <rdfs:comment xml:lang="en">True if the track contains explicit lyrics, false otherwise.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N34916278fe1d4d40a4b43ac6c5e0a2f4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Nbc5bb0e80f014d1fa29d362d0f89a229"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Music Contributor</rdfs:label>
+    <rdfs:comment xml:lang="en">An artist, musician, or musical group responsible for performing or producing music.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#instrumentalnessScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">instrumentalness score</rdfs:label>
+    <rdfs:comment xml:lang="en">Vocal absence prediction index from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#valenceScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">valence score</rdfs:label>
+    <rdfs:comment xml:lang="en">Musical positiveness/happiness from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#acousticnessScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">acousticness score</rdfs:label>
+    <rdfs:comment xml:lang="en">Acoustic confidence index from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MajorMode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalModality"/>
+    <rdfs:label xml:lang="en">Major Mode</rdfs:label>
+    <rdfs:comment xml:lang="en">Major musical scale (mode 1), generally associated with bright or happy moods.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MinorMode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb2d47f4db05545029da30103a8bae6e2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#HipHopGenre"/>
+    <rdf:rest rdf:nodeID="N4d28e45b9eaa4e6e961497a9877c81a3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ClassicalGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Classical Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Western art music tradition including orchestral, chamber, and choral works.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#InstrumentalTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Instrumental Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track that contains no vocal components (instrumentalness &gt;= 0.5).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#danceabilityScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">danceability score</rdfs:label>
+    <rdfs:comment xml:lang="en">Danceability index from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd712ed09dedb4aa1b3bb53f9b1889126">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#SingleRelease"/>
+    <rdf:rest rdf:nodeID="N91d80a33b3f24e8292b7ae51751f7147"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39757fa29631452f996909b74ca3febd">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalModality"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#popularityScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">popularity score</rdfs:label>
+    <rdfs:comment xml:lang="en">Spotify popularity score between 0 and 100.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasArtist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdfs:label xml:lang="en">has artist</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an audio track to its performing artist or group.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N221af8ddcc1942c692de097f7d134f46">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdf:rest rdf:nodeID="Nc9228200788e4a1aa978b7e2e263955f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N64af3eec46244a3a98eb3ddfd67327ab">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PopGenre"/>
+    <rdf:rest rdf:nodeID="Nad1014fd470e4c7a8a94b9b44f928a25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AlbumRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:label xml:lang="en">Album Release</rdfs:label>
+    <rdfs:comment xml:lang="en">A full-length studio or live musical release consisting of multiple tracks.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4d28e45b9eaa4e6e961497a9877c81a3">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ClassicalGenre"/>
+    <rdf:rest rdf:nodeID="N4cf1c02b5a3448b6a9719f8afde0c6bf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LatinGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Latin Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Music originating from Latin America and the Iberian Peninsula, such as reggaeton, salsa, and bachata.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AmbientGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Ambient Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">A style of gentle, mostly electronic instrumental music focusing on timbre and texture.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#livenessScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">liveness score</rdfs:label>
+    <rdfs:comment xml:lang="en">Audience presence index from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#trackTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">track title</rdfs:label>
+    <rdfs:comment xml:lang="en">The official title of the track.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LivenessFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Liveness Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Detects audience presence in the audio signal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#SpeechinessFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Speechiness Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Presence of spoken words in the track.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ValenceFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Valence Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Measurement of musical positiveness conveyed by a track.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AcousticTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Acoustic Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track produced primarily using natural, non-electric instruments (high acousticness &gt;= 0.5).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a3bc70a27ca4e93859ec13423373991">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#CompilationRelease"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#VocalTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Vocal Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track that features prominent singing or vocal performances (instrumentalness &lt; 0.5).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#belongsToRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:label xml:lang="en">belongs to release</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates an audio track to the album, single, or EP on which it was published.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#energyScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">energy score</rdfs:label>
+    <rdfs:comment xml:lang="en">Energy index from 0.0 to 1.0.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LoudnessFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Loudness Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Overall loudness in decibels (dB).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ff2cf9c6e684b258662349114265514">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="N64af3eec46244a3a98eb3ddfd67327ab"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc5bb0e80f014d1fa29d362d0f89a229">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdf:rest rdf:nodeID="N221af8ddcc1942c692de097f7d134f46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cd976f4748f4ab38d58018b416a0df2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ElectronicGenre"/>
+    <rdf:rest rdf:nodeID="Nb2d47f4db05545029da30103a8bae6e2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#CleanTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#VocalTrack"/>
+    <rdfs:label xml:lang="en">Clean Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A vocal track containing radio-safe lyrics suitable for general audiences.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LiveRecordingTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Live Recording Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track recorded during a live concert or public performance (high liveness &gt;= 0.8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Audio Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Quantitative and perceptual acoustic characteristics computed from the audio signal of a track.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#durationMs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">duration in milliseconds</rdfs:label>
+    <rdfs:comment xml:lang="en">The length of the track in milliseconds.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#SynthesizedTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Synthesized Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track produced predominantly with electronic instruments, synthesizers, and electronic rhythm machines.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#loudnessDecibels">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">loudness in dB</rdfs:label>
+    <rdfs:comment xml:lang="en">Overall loudness of the track in decibels.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#HighEnergyTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">High Energy Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A fast, loud, and intense audio track (energy &gt;= 0.7).</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LowEnergyTrack"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#albumTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">album title</rdfs:label>
+    <rdfs:comment xml:lang="en">The official title of the release.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6921f66bf2f045e18e792c19382a5b21">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioFeature"/>
+    <rdf:rest rdf:nodeID="Na18ce0c71997450590ea1dbf3443580b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#spotifyTrackId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">spotify track id</rdfs:label>
+    <rdfs:comment xml:lang="en">Unique Spotify identifier for the track (track_id).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf0f5c26200dd4dcd875f93dee4a6a371">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LatinGenre"/>
+    <rdf:rest rdf:nodeID="N8d7ef94b4c5044089189d32f0e1c3637"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ElectronicGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Electronic Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Music produced primarily with electronic equipment and digital synthesis.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdfs:label xml:lang="en">Music Group</rdfs:label>
+    <rdfs:comment xml:lang="en">A collective ensemble, band, duo, orchestra, or musical troupe.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PopGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Pop Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Popular contemporary music characterized by catchy melodies and accessible structures.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#RhythmFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioFeature"/>
+    <rdfs:label xml:lang="en">Rhythm Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Acoustic features relating to tempo, pulse, and meter.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#SoloArtist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdfs:label xml:lang="en">Solo Artist</rdfs:label>
+    <rdfs:comment xml:lang="en">An individual performer, singer, composer, or musician.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#RockGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Rock Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Rock music characterized by amplified electric guitars, bass, and drums.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9228200788e4a1aa978b7e2e263955f">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicContributor"/>
+    <rdf:rest rdf:nodeID="Nb5c306c8c4a145cf9f9d7a68fd1607e2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#EPRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:label xml:lang="en">Extended Play (EP) Release</rdfs:label>
+    <rdfs:comment xml:lang="en">An extended play release longer than a single but shorter than a full-length album.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#InstrumentalnessFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature"/>
+    <rdfs:label xml:lang="en">Instrumentalness Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Prediction of whether the track contains no vocal content.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#timeSignatureValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">time signature value</rdfs:label>
+    <rdfs:comment xml:lang="en">Estimated time signature denominator/meter.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Music Release</rdfs:label>
+    <rdfs:comment xml:lang="en">A publication medium containing one or more audio tracks, such as an album, single, or EP.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Audio Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A recorded musical sound recording or track published on Spotify.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N289b3d0f4d884d979cdd417f66d4b945">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Nd0d766d9a0e84b8cae51b23c4d558798"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalModality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Musical Modality</rdfs:label>
+    <rdfs:comment xml:lang="en">The scale or mode of a musical track, usually Major or Minor.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5c306c8c4a145cf9f9d7a68fd1607e2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdf:rest rdf:nodeID="N6921f66bf2f045e18e792c19382a5b21"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">has track</rdfs:label>
+    <rdfs:comment xml:lang="en">Inverse relation of belongsToRelease.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#belongsToRelease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#HipHopGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Hip-Hop Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Urban music characterized by rhythmic beats, rapping, and sampling.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#CompilationRelease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicRelease"/>
+    <rdfs:label xml:lang="en">Compilation Release</rdfs:label>
+    <rdfs:comment xml:lang="en">A curated collection of previously recorded or multi-artist tracks.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na18ce0c71997450590ea1dbf3443580b">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalKey"/>
+    <rdf:rest rdf:nodeID="N39757fa29631452f996909b74ca3febd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#StudioRecordingTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Studio Recording Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A track produced and recorded in a controlled studio environment (low liveness).</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LiveRecordingTrack"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MinorMode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalModality"/>
+    <rdfs:label xml:lang="en">Minor Mode</rdfs:label>
+    <rdfs:comment xml:lang="en">Minor musical scale (mode 0), generally associated with somber or reflective moods.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#TempoFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#RhythmFeature"/>
+    <rdfs:label xml:lang="en">Tempo Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">The pace or speed of a track measured in beats per minute (BPM).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#ExplicitTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#VocalTrack"/>
+    <rdfs:label xml:lang="en">Explicit Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A vocal track containing explicit lyrics, mature themes, or strong language.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#CleanTrack"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#LowEnergyTrack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:label xml:lang="en">Low Energy Track</rdfs:label>
+    <rdfs:comment xml:lang="en">A quiet, calm, or relaxing audio track (energy &lt; 0.4).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">Spotify Music Tracks Ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">A formal OWL 2 ontology for modeling music tracks, releases, artists, genres, and audio features based on the Kaggle Spotify Tracks Dataset for the UAB Ontology Engineering course assignment.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MetalGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">Metal Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">A subgenre of rock music known for aggressive tempos, distorted guitars, and heavy rhythm.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicEntity"/>
+    <rdfs:label xml:lang="en">Musical Genre</rdfs:label>
+    <rdfs:comment xml:lang="en">A conventional category that identifies pieces of music as belonging to a shared tradition or set of conventions.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91d80a33b3f24e8292b7ae51751f7147">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#EPRelease"/>
+    <rdf:rest rdf:nodeID="N3a3bc70a27ca4e93859ec13423373991"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad1014fd470e4c7a8a94b9b44f928a25">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#RockGenre"/>
+    <rdf:rest rdf:nodeID="N2cd976f4748f4ab38d58018b416a0df2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd0d766d9a0e84b8cae51b23c4d558798">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AlbumRelease"/>
+    <rdf:rest rdf:nodeID="Nd712ed09dedb4aa1b3bb53f9b1889126"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8d7ef94b4c5044089189d32f0e1c3637">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MetalGenre"/>
+    <rdf:rest rdf:nodeID="N66673cc1c592498ba6a3d62e87ca5715"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#PerceptualFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioFeature"/>
+    <rdfs:label xml:lang="en">Perceptual Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Psychoacoustic features describing human sensory perception of music.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4cf1c02b5a3448b6a9719f8afde0c6bf">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#JazzGenre"/>
+    <rdf:rest rdf:nodeID="Nf0f5c26200dd4dcd875f93dee4a6a371"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#hasGenre">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AudioTrack"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#MusicalGenre"/>
+    <rdfs:label xml:lang="en">has genre</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a track or release to its associated musical genre.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N66673cc1c592498ba6a3d62e87ca5715">
+    <rdf:first rdf:resource="http://www.semanticweb.org/ontologies/2026/10/spotify-music-tracks#AmbientGenre"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>
